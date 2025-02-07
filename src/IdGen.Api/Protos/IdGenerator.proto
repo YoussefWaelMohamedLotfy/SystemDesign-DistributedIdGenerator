@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option csharp_namespace = "IdGen.Api";
+import "google/protobuf/empty.proto";
+package IdGenerator;
+
+service IdGenerator {
+  // Request a new Snowflake ID
+  rpc GetSnowflakeId (google.protobuf.Empty) returns (SnowflakeIdResponse);
+}
+
+// The response message containing the Snowflake ID.
+message SnowflakeIdResponse {
+  // The int64 ID with Snowflake format
+  int64 id = 1;
+}

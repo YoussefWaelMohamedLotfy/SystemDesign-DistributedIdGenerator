@@ -1,0 +1,6 @@
+@IdGen.Api_HostAddress = http://localhost:5265
+
+GET {{IdGen.Api_HostAddress}}/snowflake
+Accept: application/json
+
+###
